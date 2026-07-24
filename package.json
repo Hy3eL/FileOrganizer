@@ -1,0 +1,9 @@
+{
+  "name": "file_organizer_electron_app",
+  "version": "1.0.0",
+  "description": "A desktop file organizer built with Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  }
+}
