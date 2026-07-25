@@ -19,13 +19,13 @@ app.on("window-all-closed", () => {
         app.quit();
     });
 
-ipcMain.on("select-folder", async () => {
+ipcMain.on("select-folder", async (event) => {
     const result = await dialog.showOpenDialog({
         properties: ["openDirectory"]
     });
 
     if (!result.canceled) {
-        console.log(result.filePaths[0]);
+        event.reply("folder-selected", result.filePaths[0]);
     }
 
 });
