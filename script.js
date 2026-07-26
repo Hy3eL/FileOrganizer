@@ -7,6 +7,24 @@ function browseFolder()
 });
 
 window.electronAPI.onPreviewResult((preview) => {
-    document.getElementById("preview-result").textContent =
-        JSON.stringify(preview);
+    const container = document.getElementById("preview-result");
+    const categories = ["Images", "Documents", "Videos", "Music", "Archives", "Others"];
+
+    for (const category of categories) {
+
+        const title = document.createElement("h3");
+        title.textContent = category;
+
+        const count = document.createElement("p");
+        count.textContent = `Count: ${preview[category].length}`;
+
+        container.appendChild(title);
+        container.appendChild(count);
+
+        for (const file of preview[category]) {
+            const fileElement = document.createElement("p");
+            fileElement.textContent = file;
+            container.appendChild(fileElement);
+        }
+    }
 });

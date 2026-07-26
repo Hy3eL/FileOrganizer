@@ -31,10 +31,7 @@ ipcMain.on("select-folder", async (event) => {
         fs.readdir(result.filePaths[0], function(err, files){
             if(err) {
                 console.log("Error reading directory:" + err);
-            } else {
-                console.log("Files in directory:" + files);
-            }
-        
+            }        
 
             var Images = [];
             var Documents = [];
