@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>File Organizer</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>File Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <body>
-        <div class="app">
-            <h1> File Organizer </h1>
-            <p id = "folderPath"> Select a folder to organize </p>
-            <button id = "browseButton" onClick="browseFolder()">Browse</button>
-            <p> Preview </p>
+<body>
+
+    <div class="app">
+
+        <h1>File Organizer</h1>
+        <p id="folderPath">Select a folder to organize</p>
+        <button id="browseButton" onclick="browseFolder()">
+            Browse
+        </button>
+
+        <div class="preview">
+            <p class="section-title">Preview</p>
             <div id="preview-result"></div>
-            <button id = "organizeButton" onClick="organizeFiles()"> Organize Files </button>
-            <p> Activity Log </p>
-            <p id="organization-outcome" style="visibility: hidden;"> Organization Finished </p>
         </div>
 
-        <script src="script.js"></script>
-    </body>
+        <button id="organizeButton" onclick="organizeFiles()">
+            Organize Files
+        </button>
+
+        <div class="activity">
+            <p class="section-title">Activity Log</p>
+            <p id="organization-outcome" style="visibility: hidden;">
+                Organization Finished
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
 </html>

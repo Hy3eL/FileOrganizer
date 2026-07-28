@@ -3,11 +3,15 @@ function browseFolder()
     window.electronAPI.selectFolder();
 }
     window.electronAPI.onFolderSelected((path) => {
-    document.getElementById("folderPath").textContent = path;
+    const folder = document.getElementById("folderPath");
+
+    folder.textContent = path;
+    folder.classList.add("selected");
 });
 
 window.electronAPI.onPreviewResult((preview) => {
     const container = document.getElementById("preview-result");
+    container.innerHTML = "";
     const categories = ["Images", "Documents", "Videos", "Music", "Archives", "Others"];
 
     for (const category of categories) {
