@@ -1,9 +1,17 @@
 {
-  "name": "file_organizer_electron_app",
+  "name": "file-organizer-electron-app",
   "version": "1.0.0",
   "description": "A desktop file organizer built with Electron",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
-  }
+  },
+  "keywords": [
+    "electron",
+    "file-organizer",
+    "desktop-app",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
